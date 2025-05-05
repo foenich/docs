@@ -39,9 +39,9 @@ theme:
   custom_dir: overrides
 
   features:
+    - navigation.tracking
     - navigation.instant
     - navigation.footer
-    - navigation.tabs
     - navigation.indexes
     - navigation.top
     - content.action.edit
@@ -71,8 +71,7 @@ extra:
   base_url: /docs/
 
 nav:
-  - Home:
-    - index.md
+  - Overview: index.md
   - PPUC:
     - ppuc/index.md
     - ppuc/config_tool.md
