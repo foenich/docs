@@ -1,17 +1,17 @@
 
 # Config Tool
 
-# Function
+## Function
 
 The [Config Tool](https://github.com/PPUC/config-tool) is needed to appropriately map the IO-Board inputs and outputs to a ROM in PinMame. The numbers of the inputs and outputs from PinMame are assigned to the inputs and outputs of the IO-Board firmware in the config file. In PinMame, original pinball ROM circuits are emulated. PPUC-Pinmame outputs the events of the circuit and accepts inputs for the emulated ROM. Without a config file, PPUC-Pinmame cannot communicate with the boards.
 
-# Config File
+## Config File
 
 The Config Tool outputs a config file as a result. This file has the extension ".yml". The goal of your work, besides collecting pinball data, is primarily the generation of this file.
 
 The YAML format used is very common for configuration files as it is a quasi-standard and easily readable by humans. In YAML, indentation determines which elements belong together and form a group. It is advisable not to edit this file manually, because a line break, a separator, or a space can easily be deleted, moved, or added, making the file unreadable. **Caution! Do not modify the file manually.**
 
-# Components of a Configuration
+## Components of a Configuration
 
 A configuration file for PPUC-PinMame consists of the following element groups:
 
@@ -37,9 +37,9 @@ These are the important elements needed for the connection between Pinmame and I
 -   Switch Position Plan
 -   Solenoid Position Plan
 
-# First Steps
+## First Steps
 
-## Important before we begin
+### Important before we begin
 
 Pinball machines usually have protective functions. Sometimes they are real switches, sometimes switching states in the machine's circuit. If you're building a playfield from scratch, or just want to try out part of the pinball machine, PinMame might not work as expected because you haven't created these states. Conditions are:
 
@@ -48,13 +48,13 @@ Pinball machines usually have protective functions. Sometimes they are real swit
 
 PinMame uses the inputs of the original ROMs. Therefore, they are manufacturer-specific. E.g., Game On Solenoid: Williams System 3 - 11: 23 Williams WPC: 31 Data East: 23 Sega: 15 Gottlieb System 1: 17 Gottlieb System 80: 10 Gottlieb System 3: 32 **Note:** Also think about other switches that must be closed before a game starts. For example, whether a ball is in the ball trough. Possibly also whether enough balls are in the ball trough (switch at the last ball).
 
-## Installation and Launch of the Config Tool
+### Installation and Launch of the Config Tool
 
 Installation instructions
 
 ..
 
-# Interface
+## Interface
 
 ### Home
 
@@ -104,7 +104,7 @@ PPUC-Config Tool will make different versions of the game available in the futur
 
 Elements such as Boards, LED-Strings, LEDs, etc. can be cloned using this button. This means that the element is cloned with the last saved inputs. You can recognize this by the extended title "Clone".
 
-# Creating a Game
+## Creating a Game
 
 ![enter image description here](/docs/images/config_tool/AddGame.png)
 
@@ -262,26 +262,26 @@ Warning: simply copying these examples can damage the hardware!
 **Drop Target Up:**
 **Outhole:**
 
-# View
+## View
 Here you'll always have an overview of all elements added to the game. You can also edit them directly by clicking Edit.
 
 ![enter image description here](/docs/images/config_tool/view.png)
 
 
-# Config File Export
+## Config File Export
 
 ![enter image description here](/docs/images/config_tool/mainmenudownloadconfig.png)
 
 This button in the side header of a selected game saves the complete information that has been added to the game. The file name is generated from the Game Title. The file is written in plain text in YAML format. You use this file with PPUC-Pinmame. With this, the PPUC part in PinMame learns the structure of the board configuration. You can create different configurations and use them in PPUC-Pinmame.
 
-# Save Configuration Completely
+## Save Configuration Completely
 
 ![enter image description here](/docs/images/config_tool/mainmenuexport.png)
 
 This button in the side header of a selected game saves the complete information that has been added to the game. The file name is strangely long, but this makes it unique and machine-readable. You should regularly create a backup using this button. After triggering the button, the file is immediately saved to the browser's download folder. This file can be loaded later (Game Import) or passed on. The file is not saved in plain text and includes ROM and image files.
 
 
-# Troubleshooting
+## Troubleshooting
 
 If you encounter issues with your configuration, here are some common problems and solutions:
 

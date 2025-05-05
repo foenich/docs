@@ -101,7 +101,7 @@ That doesn't prevent any commercial use, but you need to respect the terms and c
 
 We would appreciate contributions to PPUC itself or as game-specific PPUs.
 
-# ZeDMD
+## ZeDMD
 
 ZeDMD is a "real" DMD for pinball emulations and other use cases, developed as part of the PPUC project.
 For more details, visit the [ZeDMD page](https://github.com/PPUC/ZeDMD).
@@ -109,7 +109,7 @@ For more details, visit the [ZeDMD page](https://github.com/PPUC/ZeDMD).
 [![Watch the video](https://img.youtube.com/vi/B6D00oB4Co8/hqdefault.jpg)](https://youtu.be/B6D00oB4Co8)
 *Click the image to watch the video on YouTube.*
 
-# Other components of the PPUC project
+## Other components of the PPUC project
 
 To reach our goals, we contribute to other projects like VPX Standalone, batocera, libdmdutil, libserum etc.
 Some libraries and sub-projects that are also leveraged by others are hosted as PPUC projects:
