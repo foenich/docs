@@ -2,7 +2,7 @@ site_name: Pinball Power-Up Controller & DMD
 site_url: https://ppuc.org/
 site_description: Pinball Poewer-Up Controller & DMD (PPUC) is a free and open-source pinball controller and display system.
 use_directory_urls: true
-repo_url: https://github.com/PPUCl/docs
+repo_url: https://github.com/PPUC/docs
 repo_name: Website source on GitHub
 edit_uri: blob/main/docs/
 
@@ -68,6 +68,9 @@ extra:
   social:                                      # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/?h=social#social-links
     - icon: fontawesome/brands/github
       link: https://github.com/PPUC
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/fkkk4MbBn5
+      name: Join our Discord
 
 nav:
   - PPUC:
