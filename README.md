@@ -29,7 +29,7 @@ You should be able to access the doc site via your web browser at `localhost:800
 
 ## To contribute
 
-We would love contributions to the docs! We have a [Contributing Guide](https://github.com/PPUC/docs/blob/main/docs/about/help_docs.md)
+We would love contributions to the docs! We have a [Contributing Guide](/docs/about/help_docs.md)
 which explains how to contribute.
 
 ## Configuring site navigation
