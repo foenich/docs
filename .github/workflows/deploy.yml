@@ -1,0 +1,38 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install MkDocs, Material and plugins
+        run: |
+          pip install requirements.txt
+
+      - name: Build documentation
+        run: mkdocs build --site-dir ./out
+
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          # Deploy to external repository
+          external_repository: PPUC/PPUC.github.io
+          # Deletes all files in target repo except .git before deploying new files
+          keep_files: false
+          publish_dir: ./out
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # Force orphan to ensure complete cleanup when needed
+          force_orphan: false  # Set to true if you want complete clean slate (use carefully)
