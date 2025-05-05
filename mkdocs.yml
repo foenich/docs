@@ -70,8 +70,8 @@ extra:
       link: https://github.com/PPUC
 
 nav:
-- PPUC:
-  - ppuc/index.md
+  - PPUC:
+    - ppuc/index.md
 
-- ZeDMD:
-  - zedmd/index.md
+  - ZeDMD:
+    - zedmd/index.md
