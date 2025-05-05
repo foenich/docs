@@ -88,7 +88,7 @@ Edit the inputs that were requested when creating the game. (Title, Description,
 
 ### Delete
 
-![enter image description here](/docs/images/config_tool/mainmenuDelete.png)
+![enter image description here](/docs/images/config_tool/mainmenudelete.png)
 
 **CAUTION:** After confirmation, **the currently opened element** will be irrevocably deleted. The currently opened element (Game, LED-Stripe, LED, PWM-Device, Board, etc.) is deleted via this button. If you are in the game interface without having selected an element, the game will be deleted. **Note when deleting a game:** Only the game configuration is deleted. All associated boards, LED-Stripes, etc. remain. These will still be available for selection in the settings. If you want to delete the elements of a game, it's best to delete the subordinate elements first!
 
@@ -234,7 +234,7 @@ PWM Device refers to the electromagnets or other pinball hardware (usually insta
 
 Pulse Width Modulation (PWM) is a technique where the output voltage is regulated by rapidly switching the current flow on and off and varying the on-time (pulse width). A longer on-pulse results in a higher average output voltage, while a shorter pulse creates a lower voltage. This method allows efficient and precise control of power output. PWM is also used to keep the output voltage stable, even if the load changes. In addition, it allows the control of LED brightness, motor speed, and power output to many other electronic devices.
 
-![enter image description here](/docs/images/config_tool/AddPWMmenu1.png)
+![enter image description here](/docs/images/config_tool/AddPWMMenu1.png)
 
 - **Title:** Choose a unique title that helps you identify the PWM-Device.
 - **Type:** Since there are different types of controllable hardware with higher voltage, select the corresponding type here.
@@ -243,7 +243,7 @@ Pulse Width Modulation (PWM) is a technique where the output voltage is regulate
 - **Port:** The number of the output to which the hardware to be addressed is connected. Example I/O-Board 16-1-1: ![enter image description here](/docs/images/config_tool/PWM-Connector_low.png)
 
 
-![enter image description here](/docs/images/config_tool/AddPWMmenu2.png)
+![enter image description here](/docs/images/config_tool/AddPWMMenu2.png)
 
 - **Power (0-255):** 0 = 0 Volt. 255 = full power supply performance (pay attention to the max allowed voltage). Values between 0 and 255 reduce the power supply voltage.
 - **Note:** The power supply voltage does not reduce linearly! You must measure the voltage corresponding to the value before using it.
