@@ -71,8 +71,8 @@ after glow effects.
 Multipe boards can be cascaded to to have enough input and output ports. The communication happens via a BUS and the
 protocol enhances the DOF protocol which is known from the virtual pinball world.
 
-![PCB Pic](https://github.com/PPUC/Hardware_IO_16_8_1/blob/main/IO_16_8_1/PCB_V010_TH.jpg)
-![PCB Pic](https://github.com/PPUC/Hardware_Out_8x10/blob/master/Out_8x10/PCB_Out_8x10.jpg)
+![PCB Pic](https://github.com/PPUC/Hardware_IO_16_8_1/raw/main/IO_16_8_1/PCB_V010_TH.jpg)
+![PCB Pic](https://github.com/PPUC/Hardware_Out_8x10/raw/master/Out_8x10/PCB_Out_8x10.jpg)
 
 In case of replacing a broken CPU and driver boards, the platform independent
 [PPUC command line tool](https://github.com/PPUC/ppuc) can run on any old or small computer like a Raspberry Pi
@@ -91,7 +91,7 @@ You would have all capabilities like PUP Packs, FlexDMD, etc.
 [![Watch the video](https://img.youtube.com/vi/MTMMOd1anZY/hqdefault.jpg)](https://youtu.be/MTMMOd1anZY)
 *Click the image to watch the video on YouTube.*
 
-![Overview Pic](images/overview.png)
+![Overview Pic](https://github.com/PPUC/.github/raw/main/profile/images/overview.png)
 
 ## Licence
 

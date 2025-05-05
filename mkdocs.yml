@@ -75,6 +75,7 @@ extra:
 nav:
   - PPUC:
     - ppuc/index.md
+    - ppuc/config_tool.md
 
   - ZeDMD:
     - zedmd/index.md
