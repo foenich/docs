@@ -19,7 +19,7 @@ jobs:
 
       - name: Install MkDocs, Material and plugins
         run: |
-          pip install requirements.txt
+          pip install -r requirements.txt
 
       - name: Build documentation
         run: mkdocs build --site-dir ./out
