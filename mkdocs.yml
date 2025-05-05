@@ -71,6 +71,8 @@ extra:
   base_url: /docs/
 
 nav:
+  - Home:
+    - index.md
   - PPUC:
     - ppuc/index.md
     - ppuc/config_tool.md
