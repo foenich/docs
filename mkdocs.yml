@@ -74,6 +74,13 @@ nav:
   - Overview: index.md
   - PPUC:
     - ppuc/index.md
+    - ppuc/getting_started.md
     - ppuc/config_tool.md
+  - "PPUC Hardware":
+    - ppuc_hardware/index.md
+    - ppuc_hardware/io_16_8_1.md
+    - ppuc_hardware/io_16x8_matrix.md
+    - ppuc_hardware/out_8x10.md
+    - ppuc_hardware/opto_16.md
   - ZeDMD:
     - zedmd/index.md
