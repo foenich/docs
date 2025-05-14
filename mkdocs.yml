@@ -76,6 +76,7 @@ nav:
     - ppuc/index.md
     - ppuc/getting_started.md
     - ppuc/config_tool.md
+    - ppuc/build_from_source.md
   - "PPUC Hardware":
     - ppuc_hardware/index.md
     - ppuc_hardware/io_16_8_1.md

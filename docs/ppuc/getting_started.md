@@ -1,6 +1,6 @@
 # Getting Started
 
-## Planing
+## Planning
 
 If you want to run an existing playfield with PPUC you need to take some decisions:
 - Should the original wiring be kept?
