@@ -11,6 +11,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Test GitHub API connectivity
+        id: test-api
+        run: |
+          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/orgs/${{ github.repository_owner }}/repos")
+
+          if [ "$RESPONSE" -ne 200 ]; then
+            echo "::error::Failed to fetch repositories (HTTP $RESPONSE)"
+            exit 1
+          fi
+          echo "API connection successful"
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -27,7 +40,7 @@ jobs:
         run: |
           ls -R ./out  # Debug: Show built files
           test -f ./out/index.html || exit 1  # Fail if no index.html
-          grep -q "⚠️ Failed to load repository data" ./out/github_repos/index.html && exit 1
+          grep -q "⚠️ Failed to load repository data" ./out/github_repos/index.html && echo "⚠️ Failed to load repository data" && exit 1
 
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
