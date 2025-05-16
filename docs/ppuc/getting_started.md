@@ -3,6 +3,7 @@
 ## Planning
 
 If you want to run an existing playfield with PPUC you need to take some decisions:
+
 - Should the original wiring be kept?
 - Should lamps (inserts, GI and/ flashers) be replaced by addressable RGB LEDs?
 - Should switches be wired using a matrix or directly.
@@ -18,6 +19,7 @@ protocol enhances the DOF protocol which is known from the virtual pinball world
 Dependeing on your decisions abouve, you you might need different IO boards and a different amount.
 The entire hardware is open source and you can order the boards from your prefered PCB manufacturer.
 Gerber and BOM files are part of the repositories:
+
 - [IO_16_8_1](https://github.com/PPUC/Hardware_IO_16_8_1)
 - [IO_16x8_matrix](https://github.com/PPUC/Hardware_IO_16x8_matrix)
 - [Out_8X10](https://github.com/PPUC/Hardware_Out_8x10)
@@ -36,6 +38,7 @@ Repeat that procedure for every board.
 ## Wiring the boards
 
 todo:
+
 - Power
 - RS485 bus
 - Coils

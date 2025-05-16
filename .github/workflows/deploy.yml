@@ -27,6 +27,7 @@ jobs:
         run: |
           ls -R ./out  # Debug: Show built files
           test -f ./out/index.html || exit 1  # Fail if no index.html
+          grep -q "⚠️ Failed to load repository data" ./out/github_repos.html && exit 1
 
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'

@@ -60,3 +60,93 @@
 .md-content .md-typeset img, .md-content  .md-typeset svg, .md-content .md-typeset video {
   border: 1px gray solid;
 }
+
+/* GitHub Repos Grid */
+.github-repos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+/* Repo Card */
+.github-repo-card {
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 0.25rem;
+    padding: 1rem;
+    transition: box-shadow 0.25s, transform 0.25s;
+    background: var(--md-default-bg-color);
+    position: relative;
+}
+
+.github-repo-card:hover {
+    box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.github-repo-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.github-repo-card h3 a {
+    color: var(--md-typeset-a-color);
+}
+
+.github-repo-card p {
+    margin-bottom: 0.75rem;
+    color: var(--md-default-fg-color--light);
+    font-size: 0.9rem;
+}
+
+/* Release Info */
+.github-repo-release {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px dashed var(--md-default-fg-color--lightest);
+    font-size: 0.85rem;
+}
+
+.github-repo-release a {
+    color: var(--md-accent-fg-color);
+}
+
+.release-date {
+    color: var(--md-default-fg-color--light);
+    font-size: 0.8rem;
+    display: block;
+    margin-top: 0.25rem;
+}
+
+/* Stats */
+.repo-stats {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.85rem;
+}
+
+.repo-stats span {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+/* Archived Repo Indicator */
+.github-repo-card[data-archived="true"] {
+    opacity: 0.8;
+    position: relative;
+}
+
+.github-repo-card[data-archived="true"]::after {
+    content: "Archived";
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: var(--md-default-fg-color--lightest);
+    color: var(--md-default-bg-color);
+    padding: 0.1rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.7rem;
+    font-weight: bold;
+}

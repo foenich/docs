@@ -27,6 +27,11 @@ You can see the commits and page builds in the [Actions tab](https://github.com/
 
 You should be able to access the doc site via your web browser at `localhost:8000`.
 
+To start the server locally again later:
+
+1. `source venv/bin/activate`
+2. `mkdocs serve`
+
 ## To contribute
 
 We would love contributions to the docs! We have a [Contributing Guide](/docs/about/help_docs.md)
