@@ -22,7 +22,7 @@ sudo apt-get autoremove
 
 ### Compiler
 
-Install the compiler:
+Install the compiler :
 ```shell
 sudo apt-get install build-essential
 ```
@@ -48,13 +48,20 @@ sudo apt install libpipewire-0.3-dev libwayland-dev libdecor-0-dev liburing-dev
 
 Get the source files:
 ```
+mkdir $HOME/projects
+cd $HOME/projects
 git clone https://github.com/PPUC/ppuc.git
 ```
 
-Compile:
+#### Compile (PC):
 ```
 cd ppuc
 platforms/linux/x64/build.sh
+```
+#### Compile (Raspberry Pi):
+```
+cd ppuc
+platforms/linux/aarch64/build.sh
 ```
 
 ### Test
