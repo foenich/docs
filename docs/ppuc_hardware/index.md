@@ -179,6 +179,7 @@ Recommendation for wire cross section is 0.25 mm².
 
 ### Display
 These kinds of display are commonly used in pinball machines:
+
 * TFT: thin film transistor technology, used in newer machines, well known from computer monitors. If you want to use a TFT in your own machine you can connect this directly to your main pinball controller (like a raspberry pi) per HDMI or similar.
 * DMD: dot matrix display, used in the 90th, typically a monochrome (orange) plasma with a typical resolution of 128x32 pixel. In your own PPUC pinball machine you want to replace this by a RGB-LED-matrix display. See section [ZeDMD](../zedmd/index.md).
 * Segment: 7 or more plasma segments that can display alphanumerical content, used in earlier pins. In your own PPUC pinball machine you want to replace these by a RGB-LED-matrix display. See section [ZeDMD](../zedmd/index.md).
@@ -212,6 +213,7 @@ It can kill you! Be aware that you work with deadly voltages, especially on the 
 Having said that let's come to the technical part. You have to know how much power you need on the 5 V side and on the 48 V side and if it should be 48 V or less. Let's brake this down:
 
 ### 5 V Supply:
+
 * PPUC boards -> 250 mW per board
 * LED strip -> 180 mW per RGB-LED
 * single LED or LED matrix or GI -> 100 mW per LED
