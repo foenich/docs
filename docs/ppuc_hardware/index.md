@@ -7,6 +7,7 @@ EM (electro mechanical) machines are not covered here (although you could pimp t
 Virtual pinball machines can profit from PPUC. You can make them much more interesting with this hardware but this article concentrates on building real pinball machines.
 
 After reading this article you should have an understanding of
+
 * what hardware is needed for a pinball machine
 * what specific hardware of the PPUC project is available
 * how PPUC and other hardware is connected and wired
@@ -62,10 +63,11 @@ To get some sound to your ears several speakers are used with an amplifier that 
 
 ## Specific Hardware of the PPUC Project
 We designed some specific PCBs for PPUC project although they might be useful in other applications as well. Here is an overview what is available and what they can do. Fore more information there is a detailed description available for each PCB.
-* [IO_16_8_1](https://github.com/PPUC/Hardware_IO_16_8_1/): most basic PCB, always needed. Uses for reading switches, driving solenoids and control one LED strip.
-* [IO_16x8_matrix](https://github.com/PPUC/Hardware_IO_16x8_matrix/): convenient if a switch matrix is used. Especially if the original cable harness shall be used. Can control a 16x8 switch matrix. Or use for 16 inputs and 8 outputs. Also can control one LED strip.
-* [Out_8x10](https://github.com/PPUC/Hardware_Out_8x10/): convenient if a lamp matrix is used. Especially if the original cable harness shall be used. Can control a 8x10 lamp matrix [^f1] (only LEDs, no incandescent light bulbs!). Or use for 8 high side outputs and 10 low side outputs. Also can control one LED strip.
-* [Opto_16](https://github.com/PPUC/Hardware_Opto_16/): used to directly attach optical switches like opto couplers or LED transmitter/receiver pairs.
+
+* [IO_16_8_1](./io_16_8_1/): most basic PCB, always needed. Uses for reading switches, driving solenoids and control one LED strip.
+* [IO_16x8_matrix](./io_16x8_matrix/): convenient if a switch matrix is used. Especially if the original cable harness shall be used. Can control a 16x8 switch matrix. Or use for 16 inputs and 8 outputs. Also can control one LED strip.
+* [Out_8x10](./out_8x10/): convenient if a lamp matrix is used. Especially if the original cable harness shall be used. Can control a 8x10 lamp matrix [^f1] (only LEDs, no incandescent light bulbs!). Or use for 8 high side outputs and 10 low side outputs. Also can control one LED strip.
+* [Opto_16](./opto_16/): used to directly attach optical switches like opto couplers or LED transmitter/receiver pairs.
 
 The following table shows how many functions can be done with wich PCB. With that table you can estimate how many PCBs you need for your specific project. Just count the needed solenoids, flashers, lamps and switches. Take into account if you want to use controlled LED strips vs LED matrix vs direct LED drivers (mostly a mixture is used). Also think about direct switches vs switch matrix. And take into account if you have original opto boards from your pin or not.
 
