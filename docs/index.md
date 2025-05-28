@@ -91,7 +91,7 @@ You would have all capabilities like PUP Packs, FlexDMD, etc.
 [![Watch the video](https://img.youtube.com/vi/MTMMOd1anZY/hqdefault.jpg)](https://youtu.be/MTMMOd1anZY)
 *Click the image to watch the video on YouTube.*
 
-![Overview Pic](https://github.com/PPUC/.github/raw/main/profile/images/overview.png)
+![Overview pic](images/hardware/overview.png)
 
 ## Licence
 
