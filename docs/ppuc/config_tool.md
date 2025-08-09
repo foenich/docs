@@ -134,7 +134,9 @@ You will automatically switch to the editor interface of the game.
 
 - **Title:** Choose a unique title that helps you identify the board.
 - **Game:** Select the game you created earlier.
-- **Number:** Enter the number of the I/O Board that you have set on the DIP switch on the board. The number can be set from 0 to 16. It is the address that tells the board it needs to respond to the data communication. ![Config-Tool DIP Switch Hardware](/docs/images/config_tool/photoDipSwitches.png)
+- **Number:** Enter the number of the I/O Board that you have set on the DIP switch on the board. The number can be set from 0 to 16. It is the address that tells the board it needs to respond to the data communication.  
+![Config-Tool DIP Switch Hardware](/docs/images/config_tool/photoDipSwitches.png) 
+![Config-Tool DIP Switch Address](/docs/images/config_tool/DIPSwitchAddress.png)
 - **Type:** Also select the board type here.
 - **Note:** The board, like other elements, can be assigned to multiple games. This might be important for you later when naming the board to recognize the boards.
 
