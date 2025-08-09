@@ -20,6 +20,14 @@ sudo apt-get upgrade
 sudo apt-get autoremove
 ```
 
+### sudo
+
+The "super user do" command allows you to execute commands with administrative privileges. Normal users do not have these in order to keep the system safe. But 'sudo' may not work if you are not in the sudo group. In that case use the following to add yourself:
+
+```
+usermod -aG sudo $USER
+```
+
 ### Compiler
 
 Install the compiler :
@@ -29,7 +37,7 @@ sudo apt-get install build-essential
 
 Install the tools used by build.sh:
 ```shell
-sudo apt install cmake curl autoconf libtool pkg-config zlib1g zlib1g-dev
+sudo apt install git cmake curl autoconf automake libtool pkg-config zlib1g zlib1g-dev
 ```
 
 ### Header files
