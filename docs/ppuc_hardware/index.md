@@ -198,11 +198,27 @@ The bus connection shall be made in a line topology (one board to the next) usin
 * IO_16_8_1: set JP2 for termination. Set JP1 and JP3 for biasing.
 * IO_16x8_matrix, Opto_16, Out_8x10: set JP1 for termination (no biasing possible)
 
-Use only exactly one bias network on the bus (no matter where). Terminate the bus at the geometrical start and at the geometrical end (not in between) and never add more than these two terminations.
+Use only exactly one bias network on the bus (no matter where). Terminate the bus at the start (usually an adapter connected to the PC or Raspberry Pi) and at the  end (the last board in line). Don't terminate in between and never add more than these two terminations.
 
 ![bus termination and bias](../images/hardware/bus_term_bias.png)
 
 If you use a shielded cable you can connect the shield to the terminal called SHD. Shielding is not mandatory but twisted pair cable is recommended.
+
+## RS485 Adapters
+To connect the bus to a PC or Raspberry Pi, usually an adapter from USB to RS485 is used.
+
+![USB to RS485 adapter](../images/hardware/rs485adapter.jpg)
+
+These adapters come with different chips to to the job, which can be a source of issues. Additionally the chips can be configured by the operating system regarding the timing and buffers. In many applications this configuration is set for a minimum load for the operating system. In our use case it should be set to perform a rather quick response (small buffers, low latency timing).  
+
+Here is an example of the an FTDI chip FT232B: it won't work because of the latency timing. This is set to 16 ms per default. When changed to 2 ms it works with PPUC.
+In Linux the setting can be changed in this device-file:  
+/sys/bus/usb-serial/devices/ttyUSB0/latency_timer  
+Just change the number from 16 to 2 with an text editor.
+
+Another example: with the chip ch341 no changes are needed.
+
+If you have more examples please let us know or write it down here.
 
 
 ## Thoughts on Power Supply
