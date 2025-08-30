@@ -130,16 +130,20 @@ Use a paired cable (like speaker cable). Recommendation for wire cross section i
 ![solenoid wiring](../images/hardware/solenoid_wire.png)
 
 ### Direct LED
-To connect a LED (including rectifier, current limiting resistor and capacitor) you can use a mid power output that closes the circuit to ground (same is true for drivers of the matrix boards wich could also be used). Therefore the LED must be supplied with a voltage of typically 6.3 V but 5 V will do as well with slightly reduced brightness. You could also use a high power output. In that case connect it like a solenoid and don't forget to adjust the PWM in the config file for correct voltage.
+To connect a LED (including rectifier, current limiting resistor and capacitor) you can use a mid power output that closes the circuit to ground (same is true for drivers of the matrix boards wich could also be used). Therefore the LED must be supplied with a voltage of typically 6.3 V but 5 V will do as well with slightly reduced brightness.
 
 Recommendation for wire cross section is 0.25 mm². You can roughly estimate a maximum current of 20 mA per LED.
+
+<a id="section_pwm_and_leds"></a>
+#### PWM and LEDs
+You could also use a high power output and connect them like solenoids (with adjusted PWM value in the config file). In that case usually (depending on your voltage) an additional filter circuit is necessary. Unfiltered LEDs may burn if operated with a pulse current bigger than double the rated current. So be careful if you want reduce the voltage more than a factor of two. Many LEDs have a built in filter (they are called "flicker free" or likewise). Unfortunately no technical data is available, so you have to find out yourself. For example, the filtered LEDs I used were good at a factor of 4 (25 % PWM at 24 V) but burnt at a factor of 8 (12.5 % PWM at 48 V).
 
 ![direct led schematic](../images/hardware/direct_led_scm.png)
 
 ![direct led wiring](../images/hardware/direct_led_wire.png)
 
 ### LED Matrix
-A LED matrix can only be controlled by the Out_8x10 board. Like in the switch matrix every LED must have a diode in series. The LEDs are connected to the high-side and low-side switches of the Out_8x10 board. Be aware that you need a high supply voltage (20 V) for the matrix as the LEDs are only on for a short time.
+A LED matrix can only be controlled by the Out_8x10 board. Like in the switch matrix every LED must have a diode in series. The LEDs are connected to the high-side and low-side switches of the Out_8x10 board. Be aware that you need a high supply voltage (20 V) for the matrix as the LEDs are only on for a short time. Also be aware that the LEDs must have a filter (usually a resistor and capacitor) inside (called "flicker free" or likewise). See also chapter [PWM and LEDs](#section_pwm_and_leds).
 
 Recommendation for wire cross section is 0.25 mm². You can roughly estimate a maximum current of 20 mA per LED.
 
@@ -148,10 +152,10 @@ Recommendation for wire cross section is 0.25 mm². You can roughly estimate a m
 ![led matrix wiring](../images/hardware/led_matrix_wire.png)
 
 ### LED Flasher
-Flashers are connected like direct LEDs. Use a mid power output or connect them like solenoids (with adjusted PWM value in the config file).
+Flashers are connected like direct LEDs. Use a mid power output or connect them like solenoids (with adjusted PWM value in the config file). See also chapter [PWM and LEDs](#section_pwm_and_leds).
 
 ### General Illumination (GI)
-The GI (consisting of several LEDs in parallel) are usually connected like solenoids (with adjusted PWM value in the config file). But you can also use a mid power output (likewise the direct LEDs).
+The GI can be connected like direkt LEDs (consisting of several LEDs in parallel). Use mid power outputs or high power outputs. When using higher voltages with PWM make sure you also read chapter [PWM and LEDs](#section_pwm_and_leds).
 
 ### Controlled LED Strip
 Controlled LED strips (e.g. with WS2812B LEDs) are daisy chained LEDs that can be individually controlled. To archive that each LED has a chip inside. Power supply is 5 V and the single data line is connected to a special terminal (#25).
