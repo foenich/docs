@@ -218,7 +218,7 @@ These adapters come with different chips to to the job, which can be a source of
 Here is an example of the an FTDI chip FT232B: it won't work because of the latency timing. This is set to 16 ms per default. When changed to 2 ms it works with PPUC.
 In Linux the setting can be changed in this device-file:  
 /sys/bus/usb-serial/devices/ttyUSB0/latency_timer  
-Just change the number from 16 to 2 with an text editor.
+Just change the number from 16 to 2 with a text editor.
 
 Another example: with the chip ch341 no changes are needed.
 
